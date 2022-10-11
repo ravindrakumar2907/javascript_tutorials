@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>This is js demo</title>
+	<style>
+		<!-- This is for css -->
+	</style>
+		<!-- This is for java script -->
+	<script>
+
+	// single liner 
+	/* multi line comments*/
+	alert("This is demo");
+	//DOM Document Object Model
+	var user = window.document.getElementById("user");
+	var user1 = window.document.querySelector("#user");
+	
+	# value
+	window.document.querySelector("#user").value;
+	</script>
+</head>
+
+<body>
+<h1>Login form</h1>
+<input type="text" id="user" placeholder="This is demo"/>
+<button id="click_me" onclick="">click me</button>
+<input type="submit" onclick="" id="btn" />
+</body>
+</html>

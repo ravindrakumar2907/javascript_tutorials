@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>This is js demo</title>
+	<style>
+		<!-- This is for css -->
+	</style>
+	<script>
+	<!-- This is for java script -->
+	
+	// variables 
+	var userInput = window.document.getElementById("user");
+	let userInput1 = window.document.getElementById("click_me");
+	const userInput2 = window.document.getElementById("submit");
+	//2015 JavaScript ECMA-6
+	
+	var a = 6; // declartion and initilization 
+	var a = 10;
+	
+	let b = 6; // declartion and initilization 
+	b = 10;
+	
+	const EMAIl = "ravi";
+	EMAIl = "1";
+	</script>
+</head>
+
+<body>
+<h1>Login form</h1>
+<input type="text" id="user" placeholder="This is demo"/>
+<button id="click_me" onclick="">click me</button>
+<input type="submit" onclick="" id="btn" />
+</body>
+</html>
