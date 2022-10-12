@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>This is js demo</title>
+	<style>
+		<!-- This is for css -->
+	</style>
+	<link rel="stylesheet" href=""></link>
+	<script src="" ></script>
+	<script>
+	<!-- This is for javascript function -->
+	
+	function sum(){// argument / paramaters
+		var a = 10; // variables
+		var b = 10;
+		var result = a + b;
+		alert("Result of a + b: " + result);
+		
+	}
+	//sum(); // function calling
+	
+	// function mostly has 4 types
+	// 1. Function with no input paramaters and no return value 
+	
+	function print(){
+		alert("This is demo print");
+	}
+	//print();
+	//print();
+	// 2. Function with input paramaters and no return value 
+	function print1(data ){
+		alert(data);
+	}
+	//print1("This is input paramaters 1 ");
+	//print1("This is input paramaters 2 ");
+	
+	function mul(a, b){
+		alert(a * b);
+	}
+	//mul(2, 4);
+	//mul(4, 5);
+	
+	// 3. Function with input paramaters and with return value 
+	function mul(a, b){
+		var result = a * b;
+		return result;
+	}
+	var finalresult = mul(2, 4);
+	alert(finalresult);
+	
+	// 4. Function with no input paramaters and with return value
+	function getPIValue(){
+		return 3.14;
+	}
+	//var finalresult = getPIValue();
+	//alert(finalresult);
+
+	</script>
+</head>
+
+<body>
+
+</body>
+</html>
