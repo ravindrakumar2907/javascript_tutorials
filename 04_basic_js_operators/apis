@@ -1,0 +1,18 @@
+Username: ravindramore
+email: ravindramore6@gmail.com
+https://www.last.fm/api
+
+Application name	my_test_account
+API key	a80b037ef5f495f63067ee22b913ff53
+Shared secret	92fd490816e7ac29e499de8ba1d92145
+Registered to	ravindramore
+
+https://www.last.fm/api/accounts
+
+http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=YOUR_API_KEY&artist=Cher&album=Believe&format=json
+
+Spotify:
+https://developer.spotify.com/dashboard/
+https://developer.spotify.com/documentation/web-playback-sdk/quick-start/#source-code
+
+https://academy.azurelib.com/member/#/forgot-password

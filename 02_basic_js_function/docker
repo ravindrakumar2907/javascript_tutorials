@@ -1,0 +1,28 @@
+https://www.docker.com/
+
+
+https://hub.docker.com/
+
+Images : structure / already build / custom 
+
+container: run time entity
+
+
+docker pull python
+
+# to check the images in the syste
+ docker images
+ 
+# all images
+ docker images -a
+ 
+# To check container
+docker ps -a
+
+# to run
+docker run python
+
+# to run and get propmt
+ docker run -it python
+ 
+ docker rm aa21fe503bd5
