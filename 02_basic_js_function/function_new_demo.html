@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This is function demo</title>
+  </head>
+  <body>
+    <label>Input Demo</label>
+    <input type="text" id="in" name="in" />
+    <button>click here</button>
+    <p id="data"></p>
+  </body>
+  <script>
+    //onclick="doAlert();"
+    function doAlert() {
+      let data = document.getElementById("in").value;
+      document.getElementById("data").innerHTML = data;
+      alert(data);
+    }
+
+    document.querySelector("button").addEventListener("click", doAlert);
+  </script>
+</html>
