@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>for loop use in html</title>
+  </head>
+  <body>
+    <h3>Use of loops in HTML</h3>
+    Day :
+    <select>
+      <script>
+        for (let day = 1; day <= 30; day++) {
+          document.write(" <option>" + day + "</option>");
+        }
+      </script>
+    </select>
+
+    Month :
+    <select>
+      <script>
+        for (let day = 1; day <= 12; day++) {
+          document.write(" <option>" + day + "</option>");
+        }
+      </script>
+    </select>
+
+    Year :
+    <select>
+      <script>
+        for (let day = 1990; day <= 2025; day++) {
+          document.write(" <option>" + day + "</option>");
+        }
+      </script>
+    </select>
+
+    <script>
+      for (let day = 1; day <= 12; day++) {
+        document.write("<button id=" + day + ">" + day + "</button>");
+      }
+    </script>
+  </body>
+</html>
