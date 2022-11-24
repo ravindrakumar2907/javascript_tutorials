@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number Validation demo</title>
+  </head>
+  <body>
+    <h2>Number Validation Demo</h2>
+    <input
+      type="text"
+      name="mobile"
+      id="mobile"
+      placeholder="Enter Mobile number"
+    />
+    <button id="btn">Click Here to validate the number</button>
+    <br />
+    <h3>Number Result</h3>
+    <p id="numberStatus"></p>
+    <p id="number"></p>
+    <p id="local_format"></p>
+    <p id="international_format"></p>
+    <p id="location"></p>
+    <p id="carrier"></p>
+    <p id="line_type"></p>
+  </body>
+  <script>
+    //window.onload();
+
+    function validate_mobile() {
+      let mobile_number = document.getElementById("mobile").value;
+
+      if (
+        mobile_number === "" ||
+        mobile_number === " " ||
+        mobile_number === undefined
+      ) {
+        alert("Please enter the valid number");
+      } else {
+        var myHeaders = new Headers();
+        myHeaders.append("Accept", "application/json");
+        myHeaders.append("Content-Type", "application/json");
+        var raw = "";
+        var requestOptions = {
+          method: "GET",
+          headers: myHeaders,
+          // body: raw,
+          redirect: "follow",
+        };
+        mobile_number = "+91" + mobile_number;
+        fetch(
+          "https://api.numlookupapi.com/v1/validate/" +
+            mobile_number +
+            "?apikey=kFrA3jdkEPvHafFum92krrepDJWIVNoeRgag4pJ3",
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            document.getElementById("numberStatus").innerHTML = result["valid"];
+            document.getElementById("number").innerHTML = result["number"];
+            document.getElementById("local_format").innerHTML =
+              result["local_format"];
+            document.getElementById("international_format").innerHTML =
+              result["international_format"];
+            document.getElementById("location").innerHTML = result["location"];
+            document.getElementById("carrier").innerHTML = result["carrier"];
+            document.getElementById("line_type").innerHTML =
+              result["line_type"];
+          })
+          .catch((error) => console.log("error", error));
+      }
+    }
+
+    /*
+    document.getElementById("myBtn").addEventListener("click", myFunction);
+
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Hello World";
+    }*/
+
+    document.getElementById("btn").addEventListener("click", validate_mobile);
+  </script>
+</html>
