@@ -3,11 +3,12 @@
   <head>
     <title>This is Demo of Front End Class</title>
     <link rel="stylesheet" href="css/style.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <section>
       <header>
-        <h2>Front END Class</h2>
+        <h2>Admin Panel</h2>
       </header>
       <nav>
         <ul>
@@ -21,31 +22,21 @@
         </ul>
       </nav>
     </section>
-    <section id="mainContainer">
-      <main>
-        <div id="info">
-            <h3>WebSite Development</h3>
-            <p>Website developement is a branch for design and implementing the websites for bussinesses.</p>
-            <p>This coruse is consist of below markup and programming lang.</p> <br>
-            <section>
-                <article> 
-                    <ul>
-                        <li>
-                            <h3>HTML</h3>
-                            <p>HTML is used for design and devlope the website structure.</p>
-                        </li>
-                        <li>
-                            <h3>CSS</h3>
-                            <p>CSS is used for giving colors and styling the website structure.</p>
-                        </li>
-                        <li>
-                            <h3>JavaScript</h3>
-                            <p>JavaScript is used for adding dyamic nature and adding bussiness logic/.</p>
-                        </li>
-                    </ul>
-                </article>
-            </section>
-        </div>
+    <section id="adminContainer">
+      <aside id="asideArea">
+         <h3>User Menu</h3>
+
+            <ul>
+              <li><a href="searchUser.html" target="displayArea"><i class="fa fa-fw fa-search"></i>Seach User</a></li>
+              <li><a href="updateUser.html" target="displayArea"> Update User</a></li>
+              <li><a href="list_user.html" target="displayArea">List All User</a></li>
+            </ul>
+
+        </aside>
+      <main id="mainArea">
+        <iframe id="displayArea" name="displayArea" src="searchUser.html">
+
+        </iframe>
       </main>
     </section>
     <footer>
