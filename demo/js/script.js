@@ -230,9 +230,9 @@ function SearchUserToRemove(){
                 c2.innerHTML = registerObject.lastName;
                 c3.innerHTML = registerObject.email;
                 c4.innerHTML = registerObject.fee;
-                //c2.id="";
+                c3.id="email_address";
                 c5.innerHTML = "<button id='editBtn' onPlay='alert(\"data\");' onClick='editFunction();' value='${registerObject.email}'> Edit </button>";
-                c6.innerHTML = "<button id='deleteBtn' onClick='deleteFunction();' value=''> Delete </button>";
+                c6.innerHTML = "<button id='deleteBtn' onClick='deleteFunction();' value='1'> Delete </button>";
                 // Append cells to row
                 row.appendChild(c1);
                 row.appendChild(c2);
@@ -282,8 +282,57 @@ function editFunction(){
   }
 
   function deleteFunction(){
-    alert("delete");
+    let emailNode = document.getElementById("email_address");
+    let searchBoxinfo = document.getElementById("removeUserInputSearch").value;
+    let email = emailNode.innerText;
+    //alert("delete :" + email.innerText);
+    localStorage.removeItem(email);
+    alert("Data has been removed succesfully for email: " + email);
+    
+
+    let tableObject = document.getElementById("tableBody"); 
+    tableObject.remove();
+    let local = localStorage;
+    for (var key in local) {
+        if(localStorage.getItem(key) != null){
+            console.log(key);
+            // add logic for matching
+            if(key.match(searchBoxinfo)){
+                let jsonData = localStorage.getItem(key)
+                registerObject = JSON.parse(jsonData);
+                    //tableObject.insetRow();
+                 // Create row element
+                let row = document.createElement("tr")
+          
+                // Create cells
+                let c1 = document.createElement("td") // node
+                let c2 = document.createElement("td")
+                let c3 = document.createElement("td")
+                let c4 = document.createElement("td")
+                let c5 = document.createElement("td")
+                let c6 = document.createElement("td")
+                c1.innerHTML = registerObject.firstName; // String
+                c2.innerHTML = registerObject.lastName;
+                c3.innerHTML = registerObject.email;
+                c4.innerHTML = registerObject.fee;
+                c3.id="email_address";
+                c5.innerHTML = "<button id='editBtn' onPlay='alert(\"data\");' onClick='editFunction();' value='${registerObject.email}'> Edit </button>";
+                c6.innerHTML = "<button id='deleteBtn' onClick='deleteFunction();' value='1'> Delete </button>";
+                // Append cells to row
+                row.appendChild(c1);
+                row.appendChild(c2);
+                row.appendChild(c3);
+                row.appendChild(c4);
+                row.appendChild(c5);
+                row.appendChild(c6);
+                
+                // Append row to table body
+                tableObject.appendChild(row)
+            }
+        }
+    }
   }
+
   if(document.getElementById("editBtn") != null){
     document.getElementById("editBtn").addEventListener("click", editFunction);
   }
